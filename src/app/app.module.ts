@@ -1,3 +1,4 @@
+import { DetalhePedidoComponent } from './pedidos/detalhe-pedido/detalhe-pedido.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ToastrModule } from 'ngx-toastr';
@@ -22,6 +23,7 @@ import { ListaProdutosComponent } from './produtos/lista-produtos/lista-produtos
 import { LoginComponent } from './usuarios/login/login.component';
 import { EsqueciSenhaComponent } from './usuarios/esqueci-senha/esqueci-senha.component';
 import { CriarContaComponent } from './usuarios/criar-conta/criar-conta.component';
+import { ListaPedidosComponent } from './pedidos/lista-pedidos/lista-pedidos.component';
 
 
 
@@ -40,8 +42,10 @@ NgModule({
     ListaProdutosComponent,
     LoginComponent,
     EsqueciSenhaComponent,
-    CriarContaComponent
-  
+    CriarContaComponent,
+    ListaPedidosComponent,
+    DetalhePedidoComponent
+
   ],
   imports: [
     BrowserModule,
