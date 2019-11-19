@@ -13,6 +13,7 @@ import { EsqueciSenhaComponent } from './usuarios/esqueci-senha/esqueci-senha.co
 import { AuthGuard } from './usuarios/shared/auth.guard';
 import { ListaPedidosComponent } from './pedidos/lista-pedidos/lista-pedidos.component';
 import { DetalhePedidoComponent } from './pedidos/detalhe-pedido/detalhe-pedido.component';
+import { ContatoComponent } from './contato/contato/contato.component';
 
 const routes: Routes = [
 {
@@ -29,6 +30,7 @@ const routes: Routes = [
     {path: 'produtos', component:ListaProdutosComponent},
     {path: 'produtos/novo', component: FormProdutosComponent},
     {path: 'produtos/editar/:key', component: FormProdutosComponent},
+    {path: 'contatos', component: ContatoComponent},
 // o path vazio "path: '' " será direcionado para rota especificada no "redirectTo", e o patchMatch significa para começar da raiz
     {path: '', redirectTo: '/dashboard', pathMatch: 'full'}
 

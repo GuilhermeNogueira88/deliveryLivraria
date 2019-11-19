@@ -1,0 +1,33 @@
+
+<h3>Produtos</h3>
+<hr>
+<div class="card">
+  <div class="card-body">
+    <table class="table grid">
+      <thead>
+        <tr>
+          <!-- <th scope="col">#</th> -->
+          <th scope="col">#</th>
+          <th scope="col">Usuario</th>
+          <th scope="col">Mensagem</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contato of contatos | async">
+          <!-- <th scope="row">{{produto.key}}</th> -->
+
+          <td>{{ contato.nome }}</td>
+          <td>{{ contato.mensagem }}</td>
+
+          <td class="delete">
+            <button class="btn btn-danger" (click)="remover(contato.key, contato.filePath)"><i class="far fa-trash-alt"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+

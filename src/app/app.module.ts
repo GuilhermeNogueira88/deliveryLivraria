@@ -24,6 +24,7 @@ import { LoginComponent } from './usuarios/login/login.component';
 import { EsqueciSenhaComponent } from './usuarios/esqueci-senha/esqueci-senha.component';
 import { CriarContaComponent } from './usuarios/criar-conta/criar-conta.component';
 import { ListaPedidosComponent } from './pedidos/lista-pedidos/lista-pedidos.component';
+import { ContatoComponent } from './contato/contato/contato.component';
 
 
 
@@ -44,7 +45,8 @@ NgModule({
     EsqueciSenhaComponent,
     CriarContaComponent,
     ListaPedidosComponent,
-    DetalhePedidoComponent
+    DetalhePedidoComponent,
+    ContatoComponent
 
   ],
   imports: [
