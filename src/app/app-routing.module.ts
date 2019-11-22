@@ -30,7 +30,7 @@ const routes: Routes = [
     {path: 'produtos', component:ListaProdutosComponent},
     {path: 'produtos/novo', component: FormProdutosComponent},
     {path: 'produtos/editar/:key', component: FormProdutosComponent},
-    {path: 'contatos', component: ContatoComponent},
+    {path: 'contato', component: ContatoComponent},
 // o path vazio "path: '' " será direcionado para rota especificada no "redirectTo", e o patchMatch significa para começar da raiz
     {path: '', redirectTo: '/dashboard', pathMatch: 'full'}
 

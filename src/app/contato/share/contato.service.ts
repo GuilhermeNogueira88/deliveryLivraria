@@ -23,7 +23,7 @@ getAll() {
 
 
    getByKey(key: string) {
-    const path ='contato/'+key;
+    const path = 'contato/' +key;
     return this.db.object(path).snapshotChanges().pipe(
       map(change => {
         return ({ key: change.key, ...change.payload.val() });
