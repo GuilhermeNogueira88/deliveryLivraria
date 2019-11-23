@@ -8,18 +8,18 @@
         <tr>
           <!-- <th scope="col">#</th> -->
           <th scope="col">#</th>
-          <th scope="col">Usuario</th>
+          <!-- <th scope="col">Usuario</th> -->
           <th scope="col">Mensagem</th>
           <th scope="col"></th>
           <th scope="col"></th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let contato of contatos | async">
+        <tr *ngFor="let contato of listacontatos">
           <!-- <th scope="row">{{produto.key}}</th> -->
 
-          <td>{{ contato.nome }}</td>
-          <td>{{ contato.mensagem }}</td>
+          <!-- <td>{{ contato.nome }}</td> -->
+          <td>{{ contato[0].texto }}</td>
 
           <td class="delete">
             <button class="btn btn-danger" (click)="remover(contato.key, contato.filePath)"><i class="far fa-trash-alt"></i></button>
