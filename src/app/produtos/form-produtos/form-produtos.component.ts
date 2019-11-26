@@ -43,7 +43,9 @@ export class FormProdutosComponent implements OnInit {
 
         produtosSubscribe.unsubscribe();
         this.formProdutos.setValue({
-          nome: produtos.nome, descricao: produtos.descricao,
+          nome: produtos.nome,
+          autor: produtos.autor,
+          descricao: produtos.descricao,
           preco: produtos.preco,
           categoriaKey: produtos.categoriaKey,
           categoriaNome: produtos.categoriaNome,
@@ -57,6 +59,7 @@ export class FormProdutosComponent implements OnInit {
 
 
   get nome() { return this.formProdutos.get('nome'); }
+  get autor() { return this.formProdutos.get('autor'); }
   get descricao() { return this.formProdutos.get('descricao'); }
   get preco() { return this.formProdutos.get('preco'); }
   get categoriaKey() { return this.formProdutos.get('categoriaKey'); }
@@ -66,6 +69,8 @@ export class FormProdutosComponent implements OnInit {
     this.key = null;
     this.formProdutos = this.formBuilder.group({
       nome: ['', Validators.required],
+      autor: [''],
+      editora: [''],
       descricao: [''],
       preco: ['', Validators.required],
       categoriaKey: ['', Validators.required],

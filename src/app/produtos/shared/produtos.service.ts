@@ -8,11 +8,11 @@ import { AngularFireStorage } from '@angular/fire/storage';
 })
 
 export class ProdutosService {
-   
+
   produtosRef: AngularFireList<any>;
-  
+
   constructor(private db: AngularFireDatabase, private storage: AngularFireStorage) {
-    this.produtosRef = this.db.list('produtos/');  
+    this.produtosRef = this.db.list('produtos/');
 }
 
 insert(produto: any) {
@@ -29,10 +29,13 @@ private save(produto: any, key: string) {
   return new Promise( (resolve, reject) => {
     const produtoRef = {
       nome: produto.nome,
+      autor: produto.autor,
+      editora: produto.editora,
       descricao: produto.descricao,
       preco: produto.preco,
       categoriaKey: produto.categoriaKey,
       categoriaNome: produto.categoriaNome,
+
     }
 
     if (key) {

@@ -1,4 +1,4 @@
-    
+
 <h3>Produtos</h3>
 <hr>
 <div class="card">
@@ -12,6 +12,8 @@
           <!-- <th scope="col">#</th> -->
           <th scope="col">#</th>
           <th scope="col">Nome</th>
+          <th scope="col">Autor</th>
+          <th scope="col">Editora</th>
           <th scope="col">Descrição</th>
           <th scope="col">Preço</th>
           <th scope="col">Categoria</th>
@@ -26,6 +28,8 @@
             <img [src]="produto.img" class="img-thumbnail" style="max-width: 50px;" [hidden]="!produto.img" />
           </td>
           <td>{{ produto.nome }}</td>
+          <td>{{ produto.autor }}</td>
+          <td>{{ produto.editora }}</td>
           <td>{{ produto.descricao }}</td>
           <td>{{ produto.preco | currency:"BRL" }}</td>
           <td>{{ produto.categoriaNome }}</td>

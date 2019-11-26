@@ -14,17 +14,14 @@
           <th scope="col"></th>
         </tr>
       </thead>
-      <tbody>
-        <tr *ngFor="let contato of listacontatos">
-          <!-- <th scope="row">{{produto.key}}</th> -->
+      <tbody *ngFor="let contato of contatos">
+            <!-- <tr *ngFor="let c of contato"> -->
+            <td>{{ contato.key }}</td>
 
-          <!-- <td>{{ contato.nome }}</td> -->
-          <td>{{ contato[0].texto }}</td>
-
-          <td class="delete">
-            <button class="btn btn-danger" (click)="remover(contato.key, contato.filePath)"><i class="far fa-trash-alt"></i></button>
-          </td>
-        </tr>
+            <td class="delete">
+              <button class="btn btn-danger" (click)="remover(contato.key)"><i class="far fa-trash-alt"></i></button>
+            </td>
+          <!-- </tr> -->
       </tbody>
     </table>
   </div>
