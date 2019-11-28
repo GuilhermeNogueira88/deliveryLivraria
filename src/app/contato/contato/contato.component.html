@@ -7,16 +7,19 @@
       <thead>
         <tr>
           <!-- <th scope="col">#</th> -->
-          <th scope="col">#</th>
+
           <!-- <th scope="col">Usuario</th> -->
+          <th scope="col">Usuario</th>
+          <th scope="col">Email</th>
           <th scope="col">Mensagem</th>
-          <th scope="col"></th>
-          <th scope="col"></th>
         </tr>
       </thead>
       <tbody *ngFor="let contato of contatos">
-            <!-- <tr *ngFor="let c of contato"> -->
-            <td>{{ contato.key }}</td>
+            <!-- <tr *ngFor="let c of contato"></tr> -->
+            <td>{{  contato.usuario_nome }}</td>
+            <td>{{  contato.usuario_email }}</td>
+            <td>{{  contato.texto }}</td>
+
 
             <td class="delete">
               <button class="btn btn-danger" (click)="remover(contato.key)"><i class="far fa-trash-alt"></i></button>
