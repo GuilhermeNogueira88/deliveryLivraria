@@ -34,9 +34,9 @@ export class PedidoService {
   getAll() {
     return this.db.list(FirebasePath.PEDIDOS, q => q.orderByChild('data')).snapshotChanges().pipe(
       map(changes => {
-        return changes.map(m => ({ key: m.payload.key, ...m.payload.val() }))
+        return changes.map(m => ({ key: m.payload.key, ...m.payload.val() }));
       })
-    )
+    );
   }
 
   getAllAbertos() {
@@ -44,9 +44,9 @@ export class PedidoService {
       q => q.orderByChild('status').endAt(PedidoService.STATUS.SAIU_PARA_ENTREGA))
       .snapshotChanges().pipe(
         map(changes => {
-          return changes.map(m => ({ key: m.payload.key, ...m.payload.val() }))
+          return changes.map(m => ({ key: m.payload.key, ...m.payload.val() }));
         })
-      )
+      );
   }
 
   getStatusNome(status: number) {
@@ -83,7 +83,7 @@ export class PedidoService {
     const path = `${FirebasePath.PEDIDOS_PRODUTOS}${key}`;
     return this.db.list(path).snapshotChanges().pipe(
       map(changes => {
-        return changes.map(m => ({ key: m.payload.key, ...m.payload.val() }))
+        return changes.map(m => ({ key: m.payload.key, ...m.payload.val() }));
       })
     )
   }
@@ -110,6 +110,6 @@ export class PedidoService {
         map(changes => {
           return changes.length;
         })
-      )
+      );
   }
 }
